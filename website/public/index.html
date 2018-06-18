@@ -1,0 +1,76 @@
+<!-- HTML is the blueprint of the Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fathers Day Pong</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- update the version number as needed -->
+    <script defer="" src="/__/firebase/5.0.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer="" src="/__/firebase/5.0.4/firebase-auth.js"></script>
+    <script defer="" src="/__/firebase/5.0.4/firebase-database.js"></script>
+    <script defer="" src="/__/firebase/5.0.4/firebase-messaging.js"></script>
+    <script defer="" src="/__/firebase/5.0.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer="" src="/__/firebase/init.js"></script>
+
+     <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+
+  </head>
+  <body>
+    <div class="container">
+    <H1>HAPPY FATHER'S DAY <b>PONG</b></H1>
+	 <p>Hey Dad, it's Ricky! </p>
+    <p>I decided to modify a clone of PONG since you said you always wanted to make games like PONG in high school. Check out the code at:<a href="https://github.com/meth-meth-method/pong"> https://github.com/meth-meth-method/pong</a> to see how it works! <b>Click to play. Move cursor to move paddle.</b>
+      <H3>Happy Father's Day Dad!</H3>
+
+	<div id="arcadeContainer"></div>
+	<div id="controller"></div>
+	<div id="woodPanel"></div>
+
+	<audio id="audio" controls autoplay loop>
+	      <source src="Chiptronical.ogg" type="audio/ogg">
+	      	<source src="Chiptronical.mp3" type="audio/mp3">
+	      Your Browser doesn't support Audio.
+	</audio>
+    <canvas id="pong" width="600" height="400" />
+
+    <script src="Pong.js" type="text/javascript"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </div>
+  
+
+</body></html>

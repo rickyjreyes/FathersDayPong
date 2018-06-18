@@ -1,0 +1,88 @@
+/* CSS Styles the page
+*/
+body {
+    background: #ffdb58 !important;
+    text-align: center;
+    position: relative;
+    border-style: solid;
+    border-color: #855E42;
+    border-radius: 20px;
+    border-width: 10px;
+    height:2300px;
+}
+
+h1 {
+    font-family: eurostile, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+h3 {
+    font-family: eurostile, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+p {
+    font-family: eurostile, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#pong {
+    position: relative;
+    border-radius: 50px;
+    margin-top: 200px;
+    background-position: center;
+    z-index: 10;
+    text-align:center;
+}
+
+#audio{
+    position: absolute;
+    left:0;
+    right:0;
+    margin: auto;
+}
+
+#arcadeContainer {
+    padding:30px;
+    position: absolute;
+    border-top: 50em solid #000;
+    border-left: 7em solid transparent;
+    border-right: 7em solid transparent;
+    height:0;
+    width: 60em;
+    border-top-right-radius: 3em;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+    z-index: -1;
+    left:0;
+    right:0;
+    margin: auto;
+    background-position: center;
+}
+
+#controller {
+    height:15em;
+    display: block;
+    width: 1000px;
+    left:0;
+    right:0;
+    margin: auto;
+    background-color: lightgrey;
+    margin-top:800px;
+    position: absolute;
+}
+
+#woodPanel {
+    height:60em;
+    display: block;
+    width: 100%;
+    left:0;
+    right:0;
+    margin: auto;
+    background-color: #855E42;
+    margin-top:1200px;
+    position: absolute;
+}
